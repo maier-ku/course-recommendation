@@ -1,6 +1,10 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
+summary {font-family: "Lucida Console", Monaco, monospace;
+         color: #373737
+        }
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -87,8 +91,7 @@ button:hover {
   width: 999vw;
   height: 999vw;
   position: absolute;
-  box-shadow: inset calc(100px - 999vw) calc(30px - 999vw) 0 0 #fff;
-    margin-left: -100px;
+  margin-left: -100px;
 }
 .btn{
   float: right;
@@ -117,4 +120,11 @@ button:hover {
 }
 .exp:checked+.text .btn::before{
   content:'less'
+}
+
+.rec {
+  border-radius: 8px;
+  padding: 15px ;
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
 }
