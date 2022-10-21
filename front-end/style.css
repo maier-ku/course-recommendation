@@ -123,8 +123,38 @@ button:hover {
 }
 
 .rec {
+
   border-radius: 8px;
   padding: 15px ;
   box-shadow: 20px 20px 60px #bebebe,
     -20px -20px 60px #ffffff;
+}
+
+.roundconer {
+  border-radius: 15px 50px;
+  padding: 20px;
+}
+
+.form-section {
+    position: relative;
+    width: 100%;
+    height: 20%;"
+}
+
+.imgbox {
+    margin-top:-21px;
+    margin-left:-2.2%;
+    max-width:104.5%;
+    border-radius: 15px 50px 0px 0px;
+}
+
+.textbox {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: white;
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+    font-size: 32px;
 }
