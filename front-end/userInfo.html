@@ -4,51 +4,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="style.css">
-<body>
+<body class="w3-light-gray">
 
 <div class="w3-container w3-teal">
-<h1>Your learning preference</h1>
+<h1 class="w3-left" style="font-size: 2.5vw;" >Your learning preference</h1>
 </div>
 
-<div class="w3-content  w3-half w3-display-middle">
-  <form class="w3-cursive w3-card-4" style="font-size: 20px;">
+<div class="w3-content w3-card-4 w3-white roundconer">
 
-    <p>
-    <label>* Choose/type your interested subject:
-      <input list="subjects" name="myBrowser" /></label></p>
+    <div class="form-section">
+        <img src="https://www.pngarts.com/files/1/Header-PNG-Photo.png" class="imgbox">
 
-    <label style="font-size: 19px;"> Choose/type your interested subject:
-      <input list="subjects" name="subjects" /></label>
+        <span class="textbox">Get personalized recommendations based on your interesting!</span>
 
-    <p><label style="font-size: 19px;"> Choose/type your interested subject:
-      <input list="subjects" name="subjects" /></label>
+    </div>
+    <form class="w3-cursive" style="font-size: 20px;">
 
-    <p><label style="font-size: 19px;"> Choose/type your interested subject:
-      <input list="subjects" name="subjects" /></label>
+      <p>
+      <label>* Choose/type your interested subject:
+        <input list="subjects" name="myBrowser" /></label></p>
 
-    <p><label style="font-size: 19px;"> Choose/type your interested subject:
-      <input list="subjects" name="subjects" /></label>
+     <label style="font-size: 19px;"> Choose/type your interested subject:
+       <input list="subjects" name="subjects" /></label>
 
-    <p><label> * Choose the intending learning level:
-      <input list="learning-level" name="learning-level" /></label>
+      <p><label style="font-size: 19px;"> Choose/type your interested subject:
+        <input list="subjects" name="subjects" /></label>
 
-      <datalist id="subjects">
-        <option value="Computer Science">
-        <option value="Finance">
-        <option value="Business">
-        <option value="Maths">
-      </datalist>
+      <p><label style="font-size: 19px;"> Choose/type your interested subject:
+        <input list="subjects" name="subjects" /></label>
 
-      <datalist id="learning-level">
-        <option value="Beginner Level">
-        <option value="Intermediate Level">
-        <option value="Other">
-      </datalist>
+      <p><label style="font-size: 19px;"> Choose/type your interested subject:
+        <input list="subjects" name="subjects" /></label>
 
-    <p>
-    <button class="w3-button w3-section w3-teal w3-ripple"> SAVE </button></p>
+      <p><label> * Choose the intending learning level:
+        <input list="learning-level" name="learning-level" /></label>
 
-    </form>
+        <datalist id="subjects">
+          <option value="Computer Science">
+          <option value="Finance">
+         <option value="Business">
+          <option value="Maths">
+        </datalist>
+
+       <datalist id="learning-level">
+          <option value="Beginner Level">
+          <option value="Intermediate Level">
+          <option value="Other">
+        </datalist>
+
+      <p>
+      <button class="w3-button w3-section w3-teal w3-ripple"> SAVE </button></p>
+
+      </form>
 
 </div>
 </body>
