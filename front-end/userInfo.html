@@ -18,45 +18,78 @@
         <span class="textbox">Get personalized recommendations based on your interesting!</span>
 
     </div>
-    <form class="w3-cursive" style="font-size: 20px;">
 
-      <p>
-      <label>* Choose/type your interested subject:
-        <input list="subjects" name="myBrowser" /></label></p>
+    <form class="w3-cursive" style="font-size: 20px; display: inline;">
+        <h3 class="subtitle">Interested Subjects</h3>
 
-     <label style="font-size: 19px;"> Choose/type your interested subject:
-       <input list="subjects" name="subjects" /></label>
+        <div>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
 
-      <p><label style="font-size: 19px;"> Choose/type your interested subject:
-        <input list="subjects" name="subjects" /></label>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label style="font-size: 19px;"> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
 
-      <p><label style="font-size: 19px;"> Choose/type your interested subject:
-        <input list="subjects" name="subjects" /></label>
+            <p class="w3-third w3-container w3-margin-bottom">
+                <label style="font-size: 19px;"> Choose/type your interested subject:
+                    <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+        </div>
 
-      <p><label style="font-size: 19px;"> Choose/type your interested subject:
-        <input list="subjects" name="subjects" /></label>
+        <div>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
 
-      <p><label> * Choose the intending learning level:
-        <input list="learning-level" name="learning-level" /></label>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+        </div>
 
-        <datalist id="subjects">
-          <option value="Computer Science">
-          <option value="Finance">
-         <option value="Business">
-          <option value="Maths">
-        </datalist>
 
-       <datalist id="learning-level">
-          <option value="Beginner Level">
-          <option value="Intermediate Level">
-          <option value="Other">
-        </datalist>
+        <p><h3 class="subtitle">Learning Level</h3></p>
 
-      <p>
-      <button class="w3-button w3-section w3-teal w3-ripple"> SAVE </button></p>
+        <p>
+            <label> Choose the intending learning level:
+                <br><input list="learning-level" name="learning-level" style='max-width:100%'></label>
+        <p>
+
+        <p><h3 class="subtitle">Learning Language:</h3></p>
+
+        <p>
+            <label> Choose the intending learning language:
+                <br><input list="learning-language" name="learning-language" style='max-width:100%'></label>
+        <p>
+      <button class="w3-button w3-section w3-ripple teal-blue"> SAVE </button></p>
 
       </form>
 
 </div>
 </body>
 </html>
+
+<datalist id="subjects">
+          <option value="Computer Science">
+          <option value="Finance">
+         <option value="Business">
+          <option value="Maths">
+        </datalist>
+
+<datalist id="learning-level">
+    <option value="Beginner">
+    <option value="Intermediate">
+    <option value="Advanced">
+    <option value="None">
+</datalist>
+
+<datalist id="learning-language">
+    <option value="Chinese"></option>
+    <option value="English"></option>
+    <option value="Arabic"></option>
+    <option value="French"></option>
+</datalist>
