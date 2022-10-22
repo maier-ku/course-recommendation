@@ -133,6 +133,7 @@ button:hover {
 .roundconer {
   border-radius: 15px 50px;
   padding: 20px;
+  max-width: 75%;
 }
 
 .form-section {
@@ -143,8 +144,8 @@ button:hover {
 
 .imgbox {
     margin-top:-21px;
-    margin-left:-2.2%;
-    max-width:104.5%;
+    margin-left:-1.7%;
+    max-width:103.5%;
     border-radius: 15px 50px 0px 0px;
 }
 
@@ -153,8 +154,27 @@ button:hover {
     top: 0;
     text-align: center;
     color: white;
-    font-family: myFirstFont;
-    src: url(sansation_bold.woff);
+    font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 1.9vw;;
 }
+
+.teal-blue {
+    background: linear-gradient(to left, #0000cc -9%, #009999 72%);
+    color: white;
+    font-family: myFirstFont;
+    font-weight: bold;
+    max-width: 25%;
+    margin-left: 37.5%;
+    border-radius: 15px;
+}
+
+.subtitle {
+    margin:10px 0;
+    font-size: 1.8 vw;
+    line-height: 24px;
+    color: #465d7d;
+    font-weight: 600;
+}
+
+
