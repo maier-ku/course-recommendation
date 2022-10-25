@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href={% static 'css/style.css' %} />
+<link rel="stylesheet" href={% static 'css/style_sign.css' %} />
+<script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+
+<body class="w3-light-gray">
+
+    <div class="w3-container w3-quarter{width:100%} sign-display roundconer">
+
+        <form class="w3-container w3-card-4 w3-white roundconer" id="signupForm" method="post" action={% url 'signup'%}>
+
+            <p>Please fill in this form to create an account.</p>
+
+            <p>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <label for="repeat_password"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="repeat_password" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+            </p>
+
+            <!--<p>-->
+            <!--<input class="w3-radio" type="radio" name="gender" value="male" checked>-->
+            <!--<label>Male</label></p>-->
+
+            <!--<p>-->
+            <!--<input class="w3-radio" type="radio" name="gender" value="female">-->
+            <!--<label>Female</label></p>-->
+
+            <!--<p>-->
+            <!--<input class="w3-radio" type="radio" name="gender" value="" disabled>-->
+            <!--<label>Don't know (Disabled)</label></p>-->
+
+
+            <p>
+                <button class="w3-button w3-section w3-teal w3-ripple"> Sign up </button>
+            </p>
+        </form>
+
+    </div>
+    <script type="application/javascript">
+        $('#signupForm').submit(function (event) {
+            event.preventDefault()
+            var form = $(this)
+            let value = form.serializeArray()
+            let data = {}
+            $.each(value, function (index, item) {
+                data[item.name] = item.value
+            })
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                async: false,
+                data: data,
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert(data.msg)
+                        location.href = '/signup/'
+                    } else {
+                        alert(data.msg)
+                        location.href = '/profile/'
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

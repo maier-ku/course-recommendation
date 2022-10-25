@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href={% static 'css/style.css' %} />
+<link rel="stylesheet" href={% static 'css/style_log.css' %} />
+<script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+
+<body class="w3-light-gray">
+
+    <div class="w3-container w3-quarter{width:100%} w3-display-right roundconer">
+
+        <form class="w3-container w3-card-4 w3-white roundconer" id="loginForm" method="post" action={% url 'login' %}>
+
+            <p>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+            </p>
+
+            <p>
+                <input id="milk" class="w3-check" type="checkbox" checked="checked">
+                <label>Stay logged in</label>
+            </p>
+
+            <p>
+                <button class="w3-button w3-section w3-teal w3-ripple"> Log in </button>
+            </p>
+            <p><a href={% url 'signup' %}>sign up</a></p>
+        </form>
+
+    </div>
+    <script type="application/javascript">
+        $('#loginForm').submit(function (event) {
+            event.preventDefault()
+            var form = $(this)
+            let value = form.serializeArray()
+            let data = {}
+            $.each(value, function (index, item) {
+                data[item.name] = item.value
+            })
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                async: false,
+                data: data,
+                success: function (data) {
+                    alert(data.msg)
+                    location.href = '/signup/'
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+summary {font-family: "Lucida Console", Monaco, monospace;
+         color: #373737
+        }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+.wrapper {
+  display: flex;
+  overflow: hidden;
+}
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  position: relative;
+}
+.text::before {
+  content: '';
+  height: calc(100% - 24px);
+  float: right;
+}
+.text::after {
+  content: '';
+  width: 999vw;
+  height: 999vw;
+  position: absolute;
+  margin-left: -100px;
+}
+.btn{
+  float: right;
+  clear: both;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 0 8px;
+  background: #3F51B5;
+  line-height: 24px;
+  border-radius: 4px;
+  color:  #fff;
+  cursor: pointer;
+  /* margin-top: -30px; */
+}
+.btn::before{
+  content:'more'
+}
+.exp{
+  display: none;
+}
+.exp:checked+.text{
+  -webkit-line-clamp: 999;
+}
+.exp:checked+.text::after{
+  visibility: hidden;
+}
+.exp:checked+.text .btn::before{
+  content:'less'
+}
+
+.rec {
+
+  border-radius: 8px;
+  padding: 15px ;
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+
+.roundconer {
+  border-radius: 15px 50px;
+  padding: 20px;
+  max-width: 75%;
+}
+
+.form-section {
+    position: relative;
+    width: 100%;
+    height: 20%;"
+}
+
+.imgbox {
+    margin-top:-21px;
+    margin-left:-1.7%;
+    max-width:103.5%;
+    border-radius: 15px 50px 0px 0px;
+}
+
+.textbox {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 1.9vw;;
+}
+
+.teal-blue {
+    background: linear-gradient(to left, #0000cc -9%, #009999 72%);
+    color: white;
+    font-family: myFirstFont;
+    font-weight: bold;
+    max-width: 40%;
+    margin-left: 30%;
+    border-radius: 15px;
+}
+
+.subtitle {
+    margin:10px 0;
+    font-size: 1.8 vw;
+    line-height: 24px;
+    color: #465d7d;
+    font-weight: 600;
+}
+
+

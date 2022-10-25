@@ -1,0 +1,21 @@
+.sign-display{
+    position:absolute;
+    top:15%;
+    right:10%
+}
+
+body{
+background-image: url(../img/signup2.png);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;}
+
+
+
+/* Add padding to container elements */
+.container {
+  padding: 10px;
+}
+
+
