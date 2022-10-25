@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
+<body class="w3-light-gray">
+
+<div class="w3-container w3-teal">
+<h1 class="w3-left" style="font-size: 2.5vw;" >Your learning preference</h1>
+</div>
+
+<div class="w3-content w3-card-4 w3-white roundconer">
+
+    <div class="form-section">
+        <img src="https://www.pngarts.com/files/1/Header-PNG-Photo.png" class="imgbox">
+
+        <span class="textbox">Get personalized recommendations based on your interesting!</span>
+
+    </div>
+
+    <form class="w3-cursive" style="font-size: 20px; display: inline;">
+        <h3 class="subtitle">Interested Subjects</h3>
+        <h6>(* require at least one subject in this field to be filled)</h6>
+
+        <div>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label style="font-size: 19px;"> *Choose/type your interested subject:
+                <input list="subjects" name="subjects" required style='max-width:100%'></label>
+            </p>
+
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label style="font-size: 19px;"> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+
+            <p class="w3-third w3-container w3-margin-bottom">
+                <label style="font-size: 19px;"> Choose/type your interested subject:
+                    <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+        </div>
+
+        <div>
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label style="font-size: 19px;"> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+
+            <p class="w3-third w3-container w3-margin-bottom">
+            <label style="font-size: 19px;"> Choose/type your interested subject:
+                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            </p>
+        </div>
+
+        <div style="clear:both;">
+            <h3 class="subtitle">Learning Level</h3>
+
+            <p>
+                <label style="font-size: 19px;"> *Choose the intending learning level:
+                    <br><input list="learning-level" name="learning-level" required style='max-width:100%'></label>
+            <p>
+
+            <p><h3 class="subtitle">*Learning Language</h3></p>
+
+            <p>
+                <label style="font-size: 19px;"> *Choose the intending learning language:
+                    <br><input list="learning-language" name="learning-language" required style='max-width:100%'></label>
+            <p></div>
+
+            <p><h3 class="subtitle">Institution</h3></p>
+
+            <p>
+                <label style="font-size: 19px;"> *Choose your preferred Institution:
+                    <br><input list="Institution" name="Institution" required style='max-width:100%'></label>
+            <p>
+      <button class="w3-button w3-section w3-ripple teal-blue"> SAVE </button></p>
+
+      </form>
+
+</div>
+</body>
+</html>
+
+<datalist id="subjects">
+          <option value="Computer Science">
+          <option value="Finance">
+         <option value="Business">
+          <option value="Maths">
+        </datalist>
+
+<datalist id="learning-level">
+    <option value="Beginner">
+    <option value="Intermediate">
+    <option value="Advanced">
+    <option value="None">
+</datalist>
+
+<datalist id="learning-language">
+    <option value="Chinese"></option>
+    <option value="English"></option>
+    <option value="Arabic"></option>
+    <option value="French"></option>
+</datalist>
+
+<datalist id="Institution">
+    <option value="Universitat de Barcelona"></option>
+    <option value="Shanghai Jiao Tong University"></option>
+    <option value="Coursera Project Network"></option>
+    <option value="Google"></option>
+</datalist>
