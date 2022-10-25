@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href={% static 'css/style.css' %} />
+<script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+
+<body>
+
+    <div class="w3-container w3-teal w3-hide-small">
+        <h1 class="w3-right" style="font-size: 1.5vw;"><a href="{% url 'profile'%}">Reset your preference</h1>
+        <h1 class="w3-left" style="font-size: 2.5vw;">Coursera course recommendation for you</h1>
+    </div>
+
+    <div class="w3-content w3-left w3-cell-row" style="width: 50%;">
+
+        <div class="w3-margin">
+            <br><br>
+            <p>
+            <h1 style="font-size:30px"><a href="{% url 'course' course_id %}">{{course_name}}</a></h1>
+            </p>
+            <div class="w3-container">
+
+                <div class="desc-img">
+                    <p><img src={{course_image}} class="w3-cell"></p>
+                    <p><a href="{{course_link}}" class="link-button">visit the source page</a></p>
+                    <p>Offered by: {{university_name}}</p>
+                    <p>Language: {{course_language}}</p>
+                    <p>Rating: {{course_rating}}</p>
+                    <p>Level: {{course_level}}</p>
+                </div>
+                <div class="desc-text">
+                    <p>{{course_detail}}</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w3-content w3-right rec" style="width: 50%;">
+        <h3 class="subtitle">You may also interest in:</h3>
+        {% for reco_course in reco_course_details %}
+        <div class="w3-margin">
+            <details class="w3-container">
+
+                <summary style="font-size:30px"><a
+                        href="{% url 'course' reco_course.course_id %}">{{reco_course.course_name}}</a></summary>
+                <p>
+                <div class="desc-img">
+                    <p><img src="{{reco_course.course_image}}" class="w3-cell"></p>
+                    <p><a href="{{reco_course.course_link}}" class="link-button">visit the source page</a></p>
+                </div>
+                </p>
+                <div class="desc-text text-omit">
+                    <p>{{reco_course.course_detail}}</p>
+                </div>
+            </details>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

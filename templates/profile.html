@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href={% static 'css/style.css' %} />
+<script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+
+<body class="w3-light-gray">
+
+    <div class="w3-container w3-teal">
+        <h1 class="w3-right" style="font-size: 1.5vw;">Hello, {{request.user}}</h1>
+        <h1 class="w3-left" style="font-size: 2.5vw;">Your learning preference</h1>
+    </div>
+
+    <div class="w3-content w3-card-4 w3-white roundconer">
+
+        <div class="form-section">
+            <img src="https://www.pngarts.com/files/1/Header-PNG-Photo.png" class="imgbox">
+
+            <span class="textbox">Get personalized recommendations based on your interesting!</span>
+
+        </div>
+
+        <form class="w3-cursive" style="font-size: 20px; display: inline;" id="profileForm" method="post" action={%url 'profile' %}>
+            <h3 class="subtitle">Interested Subjects</h3>
+            <h6>(* require at least one subject in this field to be filled)</h6>
+
+            <div>
+                <p class="w3-third w3-container w3-margin-bottom">
+                    <label style="font-size: 19px;"> *Choose/type your interested subject:
+                        <input list="subjects" name="skills1" required style='max-width:100%'></label>
+                </p>
+
+                <p class="w3-third w3-container w3-margin-bottom">
+                    <label style="font-size: 19px;"> Choose/type your interested subject:
+                        <input list="subjects" name="skills2" style='max-width:100%'></label>
+                </p>
+
+                <p class="w3-third w3-container w3-margin-bottom">
+                    <label style="font-size: 19px;"> Choose/type your interested subject:
+                        <input list="subjects" name="skills3" style='max-width:100%'></label>
+                </p>
+            </div>
+
+            <div>
+                <p class="w3-third w3-container w3-margin-bottom">
+                    <label style="font-size: 19px;"> Choose/type your interested subject:
+                        <input list="subjects" name="skills4" style='max-width:100%'></label>
+                </p>
+
+                <p class="w3-third w3-container w3-margin-bottom">
+                    <label style="font-size: 19px;"> Choose/type your interested subject:
+                        <input list="subjects" name="skills5" style='max-width:100%'></label>
+                </p>
+            </div>
+
+            <div style="clear:both;">
+                <h3 class="subtitle">Learning Level</h3>
+
+                <p>
+                    <label style="font-size: 19px;"> *Choose the intending learning level:
+                        <br><input list="learning-level" name="level" required style='max-width:100%'></label>
+                <p>
+
+                <p>
+                <h3 class="subtitle">*Learning Language</h3>
+                </p>
+
+                <p>
+                    <label style="font-size: 19px;"> *Choose the intending learning language:
+                        <br><input list="learning-language" name="language" required style='max-width:100%'></label>
+                <p>
+            </div>
+
+            <p>
+            <h3 class="subtitle">Institution</h3>
+            </p>
+
+            <p>
+                <label style="font-size: 19px;"> *Choose your preferred Institution:
+                    <br><input list="Institution" name="university" required style='max-width:100%'></label>
+            <p>
+                <button class="w3-button w3-section w3-ripple teal-blue"> SAVE </button>
+            </p>
+
+        </form>
+
+    </div>
+    <script type="application/javascript">
+        $('#profileForm').submit(function (event) {
+            event.preventDefault()
+            var form = $(this)
+            let value = form.serializeArray()
+            let data = {}
+            $.each(value, function (index, item) {
+                data[item.name] = item.value
+            })
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                async: false,
+                data: data,
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert(data.msg)
+                        location.href = '/profile/'
+                    } else {
+                        alert(data.msg)
+                        location.href = '/recommendation/'
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
+
+<datalist id="subjects">
+    <option value="Artificial Intelligence">
+    <option value="Machine Learning">
+    <option value="Data Analysis">
+    <option value="Computer Science">
+    <option value="Python">
+    <option value="Java">
+    <option value="R">
+    <option value="Finance">
+    <option value="Marketing">
+    <option value="Accounting">
+    <option value="Management">
+    <option value="Statistics">
+    <option value="Stock">
+    <option value="Medicine">
+    <option value="Psychology">
+</datalist>
+
+<datalist id="learning-level">
+    <option value="Beginner">
+    <option value="Intermediate">
+    <option value="Advanced">
+    <option value="None">
+</datalist>
+
+<datalist id="learning-language">
+    <option value="Chinese"></option>
+    <option value="English"></option>
+    <option value="Arabic"></option>
+    <option value="French"></option>
+</datalist>
+
+<datalist id="Institution">
+    <option value="Universitat de Barcelona"></option>
+    <option value="Shanghai Jiao Tong University"></option>
+    <option value="Coursera Project Network"></option>
+    <option value="Google"></option>
+</datalist>

@@ -49,8 +49,13 @@
                 async: false,
                 data: data,
                 success: function (data) {
-                    alert(data.msg)
-                    location.href = '/signup/'
+                    if (data.status == 1) {
+                        alert(data.msg)
+                        location.href = '/login/'
+                    } else {
+                        alert(data.msg)
+                        location.href = '/recommendation/'
+                    }
                 }
             })
         })

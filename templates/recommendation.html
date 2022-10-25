@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href={% static 'css/style.css' %} />
+<script src={% static 'js/jquery-3.6.0.min.js' %}></script>
+
+<body>
+
+    <div class="w3-container w3-teal w3-hide-small">
+        <h1 class="w3-right" style="font-size: 1.5vw;"><a href="{% url 'profile'%}">Reset your preference> </a>></h1>
+        <h1 class="w3-left" style="font-size: 2.5vw;">Coursera course recommendation for you</h1>
+    </div>
+
+    <div class="w3-content">
+        {% for course_detail in course_details %}
+        <div class="w3-row w3-margin">
+            <div class="w3-quarter">
+                <img src={{course_detail.course_image}} style="width:100%;min-height:200px" class="w3-hover-opacity">
+            </div>
+
+            <details class="w3-threequarter w3-container">
+                <summary style="font-size:30px"><a
+                        href="{% url 'course' course_detail.course_id %}">{{course_detail.course_name}}</a></summary>
+                <p>Offered by: {{course_detail.university_name}}</p>
+                <p>Rating: {{course_detail.course_rating}}</p>
+                <p>Language: {{course_detail.course_language}}</p>
+                <p>Level: {{course_detail.course_level}}</p>
+            </details>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
