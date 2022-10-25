@@ -21,11 +21,12 @@
 
     <form class="w3-cursive" style="font-size: 20px; display: inline;">
         <h3 class="subtitle">Interested Subjects</h3>
+        <h6>(* require at least one subject in this field to be filled)</h6>
 
         <div>
             <p class="w3-third w3-container w3-margin-bottom">
-            <label style="font-size: 19px;"> Choose/type your interested subject:
-                <input list="subjects" name="subjects" style='max-width:100%'></label>
+            <label style="font-size: 19px;"> *Choose/type your interested subject:
+                <input list="subjects" name="subjects" required style='max-width:100%'></label>
             </p>
 
             <p class="w3-third w3-container w3-margin-bottom">
@@ -55,22 +56,22 @@
             <h3 class="subtitle">Learning Level</h3>
 
             <p>
-                <label style="font-size: 19px;"> Choose the intending learning level:
-                    <br><input list="learning-level" name="learning-level" style='max-width:100%'></label>
+                <label style="font-size: 19px;"> *Choose the intending learning level:
+                    <br><input list="learning-level" name="learning-level" required style='max-width:100%'></label>
             <p>
 
-            <p><h3 class="subtitle">Learning Language</h3></p>
+            <p><h3 class="subtitle">*Learning Language</h3></p>
 
             <p>
-                <label style="font-size: 19px;"> Choose the intending learning language:
-                    <br><input list="learning-language" name="learning-language" style='max-width:100%'></label>
+                <label style="font-size: 19px;"> *Choose the intending learning language:
+                    <br><input list="learning-language" name="learning-language" required style='max-width:100%'></label>
             <p></div>
 
             <p><h3 class="subtitle">Institution</h3></p>
 
             <p>
-                <label style="font-size: 19px;"> Choose your preferred Institution:
-                    <br><input list="Institution" name="Institution" style='max-width:100%'></label>
+                <label style="font-size: 19px;"> *Choose your preferred Institution:
+                    <br><input list="Institution" name="Institution" required style='max-width:100%'></label>
             <p>
       <button class="w3-button w3-section w3-ripple teal-blue"> SAVE </button></p>
 
