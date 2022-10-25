@@ -1,242 +1,270 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<title>Coursera course recommendation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="func.js"></script>
+<link rel="stylesheet" href="style.css">
+<body>
 
-summary {font-family: "Lucida Console", Monaco, monospace;
-         color: #373737
-        }
+<div class="w3-container w3-teal w3-hide-small">
+  <h1 class="w3-right" style="font-size: 1.5vw;"><a href="userInfo.html">Reset your preference</h1>
+  <h1 class="w3-left" style="font-size: 2.5vw;" >Coursera course recommendation for you</h1>
+</div>
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+<div class="w3-content w3-left w3-cell-row" style="width: 50%;">
 
-a {
-  background:
-    linear-gradient(
-      to right,
-      rgba(100, 200, 200, 1),
-      rgba(100, 200, 200, 1)
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 0, 0, 1),
-      rgba(255, 0, 180, 1),
-      rgba(0, 100, 200, 1)
-  );
-  background-size: 100% 3px, 0 3px;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-}
+  <div class="w3-margin">
+      <br><br><p>
+        <h1 style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></h1>
+      </p>
+    <div class="w3-container">
 
-a:hover {
-  background-size: 0 3px, 100% 3px;
-}
+        <div class="desc-img">
+            <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+            <p><a href="#" class="link-button">visit the source page</a></p>
+        </div>
+        <div class="desc-text">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
 
-/* Full-width input fields */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
 
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    </div>
+  </div>
+</div>
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
-  }
-}
 
-.wrapper {
-  display: flex;
-  overflow: hidden;
-}
-.text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: justify;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  position: relative;
-}
-.text::before {
-  content: '';
-  height: calc(100% - 24px);
-  float: right;
-}
-.text::after {
-  content: '';
-  width: 999vw;
-  height: 999vw;
-  position: absolute;
-  margin-left: -100px;
-}
-.btn{
-  float: right;
-  clear: both;
-  margin-left: 10px;
-  font-size: 16px;
-  padding: 0 8px;
-  background: #3F51B5;
-  line-height: 24px;
-  border-radius: 4px;
-  color:  #fff;
-  cursor: pointer;
-  /* margin-top: -30px; */
-}
-.btn::before{
-  content:'more'
-}
-.exp{
-  display: none;
-}
-.exp:checked+.text{
-  -webkit-line-clamp: 999;
-}
-.exp:checked+.text::after{
-  visibility: hidden;
-}
-.exp:checked+.text .btn::before{
-  content:'less'
-}
 
-.rec {
+<div class="w3-content w3-right rec" style="width: 50%;">
+    <h3 class="subtitle">You may also interest in:</h3>
 
-  border-radius: 8px;
-  padding: 15px ;
-  box-shadow: 20px 20px 60px #bebebe,
-    -20px -20px 60px #ffffff;
-}
+    <div class="w3-margin">
+        <details class="w3-container">
 
-.roundconer {
-  border-radius: 15px 50px;
-  padding: 20px;
-  max-width: 75%;
-}
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
 
-.form-section {
-    position: relative;
-    width: 100%;
-    height: 20%;"
-}
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
 
-.imgbox {
-    margin-top:-21px;
-    margin-left:-1.7%;
-    max-width:103.5%;
-    border-radius: 15px 50px 0px 0px;
-}
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
 
-.textbox {
-    position: absolute;
-    top: 0;
-    text-align: center;
-    color: white;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-weight: bold;
-    font-size: 1.9vw;;
-}
+    <div class="w3-margin">
+        <details class="w3-container">
 
-.teal-blue {
-    background: linear-gradient(to left, #0000cc -9%, #009999 72%);
-    color: white;
-    font-family: myFirstFont;
-    font-weight: bold;
-    max-width: 40%;
-    margin-left: 30%;
-    border-radius: 15px;
-}
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
 
-.subtitle {
-    margin:10px 0;
-    font-size: 1.8 vw;
-    line-height: 24px;
-    color: #465d7d;
-    font-weight: 600;
-}
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
 
-.desc-img {
-    width: 40%;
-    float:left;
-}
-.desc-img img {
-    display: block;
-    width: 90%;
-}
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
 
-.desc-text {
-    float:right;
-    width: 60%;
-}
+    <div class="w3-margin">
+        <details class="w3-container">
 
-.link-button {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    border: solid 1px #20538D;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-    background: #4479BA;
-    color: #FFF;
-    padding: 8px 12px;
-    text-decoration: none;
-}
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
 
-.text-omit {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 12;
-    overflow: hidden;
-}
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+    <div class="w3-margin">
+        <details class="w3-container">
+
+            <summary style="font-size:30px"><a href="#"> Real-time OCR and Text Detection with Tensorflow, OpenCV and Tesseract</a></summary>
+            <p>
+            <div class="desc-img">
+                <p><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/f8/ea26903b5311e991a4eda65d2fed7a/RACE-SCALE_2.jpg?auto=format%2Ccompress&dpr=1&w=330&h=330&fit=fill&q=25" class="w3-cell"></p>
+                <p><a href="#" class="link-button">visit the source page</a></p>
+            </div>
+            </p>
+        <div class="desc-text text-omit">
+            <p>
+            In this 1-hour long project-based course, you will learn how to collect and label images and use them to train a Tensorflow CNN (convolutional neural network) model to recognize relevant areas of (typeface) text in any image, video frame or frame from webcam video. You will learn how to extract image segments that your detector has identified as containing text and enhance them using various image filters from the OpenCV module. Then you will learn how to pass the result image to Google's open-source OCR (Optical Character Recognition) software using the pytesseract python library and read the text to whatever form of output you like.
+
+            All of this will be done on Windows, but can be accomplished with very little alteration on Linux as well. We will be using the IDLE development environment to write a single script to scan our video, webcam input, or array of images for text and read that text into our output. Tensorflow, the Tensorflow Object Detection API, Tesseract, the pytesseract library, labelImg for image annotation, OpenCV, and all other required software has already been installed for you in your Rhyme desktop.
+
+            Note: This course works best for learners who are based in the North America region. Weâ€™re currently working on providing the same experience in other regions.
+            </p>
+        </div>
+    </details>
+  </div>
+
+</div>
+
+</body>
+</html>
